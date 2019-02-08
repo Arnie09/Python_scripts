@@ -15,9 +15,10 @@
 
 ### Movie database 
     
-    In this script i have implemented some basic python functionality in order to search through a file structure to look for media files
-    mainly movies.These movie when given a proper name by the use will be searched in omdb using an API and the information will be 
-    stored in a local json file which can be used later or fed to some other application. Made as a part of my python learning project.
+    In this script i have implemented some basic python functionality in order to search through a file structure to look 
+    for media files mainly movies.These movie when given a proper name by the use will be searched in omdb using 
+    an API and the information will be stored in a local json file which can be used later or fed to some other 
+    application. Made as a part of my python learning project.
     
 ####    Requirement :
     Python 3.5+,omdb
