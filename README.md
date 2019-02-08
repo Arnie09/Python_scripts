@@ -20,5 +20,5 @@
     an API and the information will be stored in a local json file which can be used later or fed to some other 
     application. Made as a part of my python learning project.
     
-####    Requirement :
+####    Requirements :
     Python 3.5+,omdb
