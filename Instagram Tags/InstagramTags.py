@@ -25,7 +25,7 @@ elif(choice == 2):
 
 
 ListofElements = []
-
+sleep(3)
 url = "https://www.instagram.com/explore/tags/"+tag+"/"
 print(url)
 driver.get(url)
