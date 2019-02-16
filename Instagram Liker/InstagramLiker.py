@@ -34,6 +34,14 @@ driver.get(url)
 #write code for the like part here!
 driver.find_element_by_xpath("//section/main/article/div[1]/div/div/div[1]/div[1]").click()
 sleep(1)
+#clicking the first like 
 driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]").click()
-sleep(5)
+sleep(3)
+driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/a").click()
+sleep(2)
+for i in range(10):
+    driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]/button/span").click()
+    sleep(3)
+    driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/a[2]").click()
+    sleep(2)
 driver.quit()
