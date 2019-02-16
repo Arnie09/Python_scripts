@@ -4,15 +4,16 @@ import sys
 import os
 
 path = os.path.join(sys.path[0], 'chromedriver.exe')
-driver = webdriver.Chrome(path)
+
 choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
 password = input("Enter the password : ")
 tag = input("Enter the tag you want to search for : ")
 limit = int(input("Enter how many pictures you want to like?"))
-time = (limit * 5) + 4
+time = (limit * 5) + 6
 print("It will take approximately ",time,"seconds to run!")
-
+sleep(2)
+driver = webdriver.Chrome(path)
 url1 = "https://www.instagram.com"
 driver.set_page_load_timeout(30)
 driver.get(url1)
