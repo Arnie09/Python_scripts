@@ -1,5 +1,10 @@
 from selenium import webdriver
 from time import sleep
+import sys
+import os
+
+path = os.path.join(sys.path[0], 'chromedriver.exe')
+driver = webdriver.Chrome(path)
 choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
 password = input("Enter the password : ")
@@ -9,13 +14,11 @@ time = (limit * 5) + 4
 print("It will take approximately ",time,"seconds to run!")
 
 url1 = "https://www.instagram.com"
-driver = webdriver.Chrome("C:/Users/Arnab/Downloads/chromedriver")
 driver.set_page_load_timeout(30)
 driver.get(url1)
 if (choice == 1):
     # statements for facebook login
     driver.find_element_by_xpath("//section/main/article/div[2]/div[1]/div/form/div[1]/button").click()
-    print("happy")
     driver.find_element_by_name("email").send_keys(email)
     driver.find_element_by_name("pass").send_keys(password)
     driver.find_element_by_name("login").click()
