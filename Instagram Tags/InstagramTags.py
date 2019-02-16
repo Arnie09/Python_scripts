@@ -1,5 +1,9 @@
 from selenium import webdriver
 from time import sleep
+import sys
+import os
+
+path = os.path.join(sys.path[0], 'chromedriver.exe')
 choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
 password = input("Enter the password : ")
@@ -7,7 +11,7 @@ tag = input("Enter the tag you want to search for : ")
 number_of_tags = int(input("Enter the number of tags that you want : "))
 
 url1 = "https://www.instagram.com"
-driver = webdriver.Chrome("C:/Users/Arnab/Downloads/chromedriver")
+driver = webdriver.Chrome(path)
 driver.set_page_load_timeout(30)
 driver.get(url1)
 if (choice == 1):
