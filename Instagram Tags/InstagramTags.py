@@ -1,6 +1,6 @@
 from selenium import webdriver
 from time import sleep
-choice = input("Enter 1 for facebook log in 2 for email login : ")
+choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
 password = input("Enter the password : ")
 tag = input("Enter the tag you want to search for : ")
