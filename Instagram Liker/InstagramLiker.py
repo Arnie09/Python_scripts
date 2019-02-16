@@ -1,10 +1,10 @@
 from selenium import webdriver
 from time import sleep
-choice = input("Enter 1 for facebook log in 2 for email login : ")
+choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
 password = input("Enter the password : ")
 tag = input("Enter the tag you want to search for : ")
-number_of_tags = int(input("Enter the number of tags that you want : "))
+
 
 url1 = "https://www.instagram.com"
 driver = webdriver.Chrome("C:/Users/Arnab/Downloads/chromedriver")
@@ -13,6 +13,7 @@ driver.get(url1)
 if (choice == 1):
     # statements for facebook login
     driver.find_element_by_xpath("//section/main/article/div[2]/div[1]/div/form/div[1]/button").click()
+    print("happy")
     driver.find_element_by_name("email").send_keys(email)
     driver.find_element_by_name("pass").send_keys(password)
     driver.find_element_by_name("login").click()
@@ -25,9 +26,14 @@ elif(choice == 2):
 
 
 ListofElements = []
+sleep(3)
 
 url = "https://www.instagram.com/explore/tags/"+tag+"/"
 print(url)
 driver.get(url)
 #write code for the like part here!
+driver.find_element_by_xpath("//section/main/article/div[1]/div/div/div[1]/div[1]").click()
+sleep(1)
+driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]").click()
+sleep(5)
 driver.quit()
