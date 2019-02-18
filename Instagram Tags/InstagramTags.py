@@ -23,6 +23,7 @@ if (choice == 1):
 elif(choice == 2):
     # statements for email login
     driver.find_element_by_xpath("//section/main/article/div[2]/div[2]/p/a").click()
+    sleep(5)
     driver.find_element_by_name("username").send_keys(email)
     driver.find_element_by_name("password").send_keys(password)
     driver.find_element_by_xpath("//section/main/div/article/div/div[1]/div/form/div[3]/button").click()   
