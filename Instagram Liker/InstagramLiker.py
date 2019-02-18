@@ -8,7 +8,7 @@ path = os.path.join(sys.path[0], 'chromedriver.exe')
 choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
 password = input("Enter the password : ")
-tag = input("Enter the tag you want to search for : ")
+tags = input("Enter the tag you want to search for : (saperate the tags by a ',')").split(",")
 limit = int(input("Enter how many pictures you want to like?"))
 time = (limit * 5) + 6
 print("It will take approximately ",time,"seconds to run!")
@@ -34,21 +34,22 @@ elif(choice == 2):
 
 ListofElements = []
 sleep(3)
+for tag in tags:
 
-url = "https://www.instagram.com/explore/tags/"+tag+"/"
+    url = "https://www.instagram.com/explore/tags/"+tag+"/"
 
-driver.get(url)
-#write code for the like part here!
-driver.find_element_by_xpath("//section/main/article/div[1]/div/div/div[1]/div[1]").click()
-sleep(1)
-#clicking the first like 
-driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]").click()
-sleep(3)
-driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/a").click()
-sleep(2)
-for i in range(limit-1):
-    driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]/button/span").click()
+    driver.get(url)
+    #write code for the like part here!
+    driver.find_element_by_xpath("//section/main/article/div[1]/div/div/div[1]/div[1]").click()
+    sleep(1)
+    #clicking the first like 
+    driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]").click()
     sleep(3)
-    driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/a[2]").click()
+    driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/a").click()
     sleep(2)
+    for i in range(limit-1):
+        driver.find_element_by_xpath("/html/body/div[2]/div[2]/div/article/div[2]/section[1]/span[1]/button/span").click()
+        sleep(3)
+        driver.find_element_by_xpath("/html/body/div[2]/div[1]/div/div/a[2]").click()
+        sleep(2)
 driver.quit()
