@@ -2,12 +2,13 @@ from selenium import webdriver
 from time import sleep
 import sys
 import os
+import getpass
 
 path = os.path.join(sys.path[0], 'chromedriver.exe')
 
 choice = int(input("Enter 1 for facebook log in 2 for email login : "))
 email = input("Enter the email : ")
-password = input("Enter the password : ")
+password = getpass.getpass('Password:')
 tags = input("Enter the tag you want to search for : (saperate the tags by a ',')").split(",")
 limit = int(input("Enter how many pictures you want to like?"))
 time = (len(tags) * limit * 5) + 6
