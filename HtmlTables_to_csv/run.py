@@ -11,14 +11,20 @@ header_data = []
 soup = BeautifulSoup(open(path),'html.parser')
 header = soup.find_all("table")[0].find("tr")
 for items in header:
-    header_data.append(items.get_text())
-
+    try:
+        header_data.append(items.get_text())
+    except:
+        continue
+    
 ''' getting the data '''
 dataHtml = soup.find_all("table")[0].find_all("tr")[1:]
 for items in dataHtml:
     sub_data = []
     for sub_items in items:
-        sub_data.append(sub_items.get_text())
+        try:
+            sub_data.append(sub_items.get_text())
+        except:
+            continue
     data.append(sub_data)
 
 ''' generating and storing dataFrame'''
