@@ -1,0 +1,8 @@
+Unlike the other scripts on this list,
+this script is unusable by others as it was
+specifically tailored for my needs.
+
+What the script does is that it takes attributes of the common
+index from 5 different datasets and then compiles them together
+into one single big dataset.It combines all the columns together and the respective
+datas.
