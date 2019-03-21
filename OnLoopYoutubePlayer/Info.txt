@@ -1,1 +1,6 @@
 this script plays a youtube song as many times as you want it toplay without you needing to interact with the browser to repeat the song
+
+Code has a lot of user dependancies and will break if wrong info is supplied
+Input format
+->>> Name of a song Or YOUTUBE LINK ONLY
+->>> Number of times the user wants the song to be played

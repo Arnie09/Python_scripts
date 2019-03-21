@@ -7,12 +7,14 @@ path = os.path.join(sys.path[0], 'chromedriver.exe')
 state = False
 '''taking the requisite inputs from the user'''
 song = input("Enter the song you want to play or paste the url of the youtube video : ")
-print(song)
+# print(song)
 times = int (input("Enter the number of time you want to play the song : "))
 sub = song[0:5]
-print(sub)
+#rint(sub)
+
+'''checking if the user has given name of song or youtube link'''
 if(sub == "https"):
-    print("HI")
+    #print("HI")
     url = song
     state = True
 else:
