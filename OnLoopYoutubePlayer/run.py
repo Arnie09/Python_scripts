@@ -8,9 +8,9 @@ state = False
 '''taking the requisite inputs from the user'''
 song = input("Enter the song you want to play or paste the url of the youtube video : ")
 # print(song)
-times = int (input("Enter the number of time you want to play the song : "))
+times = int (input("Enter the number of time you want to play the song in minutes: "))
 sub = song[0:5]
-#rint(sub)
+#print(sub)
 
 '''checking if the user has given name of song or youtube link'''
 if(sub == "https"):
@@ -37,7 +37,7 @@ if(state == False):
     '''getting the link of the song'''
     link = driver.find_element_by_xpath('//*[@id="rso"]/div/div/div[1]/div/div/div[1]/a').get_attribute("href")
     '''loop for the number of times the user wants'''
-    while(times!=0):
+    while(times>0):
         driver.get(link)
         sleep(1)
         length_str = driver.find_element_by_class_name("ytp-time-duration").text
@@ -47,9 +47,9 @@ if(state == False):
         sleep(time)
         '''if time <100  then it has to be an add'''
         if(time>100):
-            times -=1
+            times -=time
 else:
-    while(times!=0):
+    while(times>0):
         driver.get(url)
         sleep(1)
         length_str = driver.find_element_by_class_name("ytp-time-duration").text
@@ -59,6 +59,6 @@ else:
         sleep(time)
         '''if time <100  then it has to be an add'''
         if(time>100):
-            times -=1
+            times -=time
 
 driver.quit()
