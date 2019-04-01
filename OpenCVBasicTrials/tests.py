@@ -19,6 +19,8 @@ while True:
     
     deltaframe = cv2.absdiff(first_frame,gray)
 
+    edge = cv2.Canny(frame,100,200)
+
     thresh_data = cv2.threshold(deltaframe,30,255,cv2.THRESH_BINARY)[1]
     thresh_data = cv2.dilate(thresh_data,None,iterations = 0)
 
@@ -34,6 +36,7 @@ while True:
     cv2.imshow('Capturing',gray)
     #cv2.imshow('deltaframe',deltaframe)
     cv2.imshow('thresh',thresh_data)
+    cv2.imshow("edge",edge)
 
     key = cv2.waitKey(1)
 
