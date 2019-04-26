@@ -47,7 +47,7 @@
 ### Image Size Convertor
 
     A hastily written python script to change the image size of any number of images in a directory in which the script is placed to 
-a user defined size using image processing by openCV.
+    a user defined size using image processing by openCV.
 
 ####    Requirements :
  
