@@ -27,7 +27,7 @@ while True:
     (cnts,_) = cv2.findContours(thresh_data.copy(),cv2.RETR_EXTERNAL,cv2.CHAIN_APPROX_SIMPLE)
 
     for contours in cnts:
-        if cv2.contourArea(contours)<1000:
+        if cv2.contouframe
             continue
         x,y,h,w = cv2.boundingRect(contours)
         cv2.rectangle(frame,(x,y),(x+h,y+w),(255,0,0),3)
