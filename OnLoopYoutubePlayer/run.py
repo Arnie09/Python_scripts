@@ -9,6 +9,7 @@ state = False
 song = input("Enter the song you want to play or paste the url of the youtube video : ")
 # print(song)
 times = int (input("Enter the number of time you want to play the song in minutes: "))
+times = times*60
 sub = song[0:5]
 #print(sub)
 
