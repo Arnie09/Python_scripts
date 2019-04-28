@@ -43,3 +43,12 @@
 ####    Requirements :
 
     Python 3.5+,Selenium
+    
+### Image Size Convertor
+
+    A hastily written python script to change the image size of any number of images in a directory in which the script is placed to 
+    a user defined size using image processing by openCV.
+
+####    Requirements :
+ 
+    Python 3.5+,OpenCV2
