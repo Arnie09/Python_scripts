@@ -52,3 +52,11 @@
 ####    Requirements :
  
     Python 3.5+,OpenCV2
+
+### Random shapes generator 
+
+    A program to generate random shapes over a user defined canvas. Can be used to generate images using genertic or hill climbing algorithms.
+
+####    Requirements :
+
+    Python 3.5+,OpenCV2
