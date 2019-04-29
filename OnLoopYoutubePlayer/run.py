@@ -40,8 +40,9 @@ if(state == False):
     '''loop for the number of times the user wants'''
     while(times>0):
         driver.get(link)
-        sleep(1)
+        sleep(2.5)
         length_str = driver.find_element_by_class_name("ytp-time-duration").text
+        print(length_str)
         min,sec = map(int,length_str.split(":"))
         time = min*60+sec
         #print(time)
@@ -52,8 +53,9 @@ if(state == False):
 else:
     while(times>0):
         driver.get(url)
-        sleep(1)
+        sleep(2.5)
         length_str = driver.find_element_by_class_name("ytp-time-duration").text
+        print(length_str)
         min,sec = map(int,length_str.split(":"))
         time = min*60+sec
         #print(time)
