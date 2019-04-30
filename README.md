@@ -1,5 +1,12 @@
 # Python_scripts
 
+Do you like writing scripts in python as a hobby? Doesn't scripting make monotonous wrk easier? Weren't computers made to do boring monotonous works? Well, if you agree with the statement and like being lazy then submit your delicious python scripts into this fine repository. Lets make it a collection as a reference for other lazy script writers like yourself. 
+
+All you need to do if you want your script to be a part of this collection is by simply forking this repository, adding your delicious scripts and sending a pull request. After your code has been reviewed, it will be added here. Some rules to keep in mind while making the scripts : 
+
+* The script must solve a task, a day to day task more conveniently.
+* The script should run uniformly across all machines having the same OS. 
+
 
 ## Scripts descriptions : 
  
@@ -60,3 +67,27 @@
 ####    Requirements :
 
     Python 3.5+,OpenCV2
+
+### Auto Whatsapp
+
+    A program to spam messages to a whatsapp contact any number of times
+
+####    Requirements :
+
+    Python 3.5+,Sellenium,Chrome web browser
+
+### PDF Downloader
+
+    A program to download PDF files off the internet. 
+
+####    Requirements :
+
+    Python 3.5+
+
+### File Man
+
+    A simple Command line tool to manipulate files and directories and perform repetitive tasks like creating multiple directories fast and easy
+
+####    Requirements :
+
+    Python 3.5+
