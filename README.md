@@ -6,7 +6,12 @@ All you need to do if you want your script to be a part of this collection is by
 
 * The script must solve a task, a day to day task more conveniently.
 * The script should run uniformly across all machines having the same OS. 
+* If the script is dependant on some open source programs please include the program/the link of the program 
 
+
+## How to run the scripts :
+
+Since all the scripts are made with Python, it is necessary to have python in your system. The additional libraries required by each script has been written in the requirements section of the specific program below!
 
 ## Scripts descriptions : 
  
@@ -91,3 +96,9 @@ All you need to do if you want your script to be a part of this collection is by
 ####    Requirements :
 
     Python 3.5+
+
+## Getting started with Python: 
+
+In case you want to learn python here's a [great place](https://guide.freecodecamp.org/python/) to start learning python for absolutely free!
+
+### Happy Scripting!
