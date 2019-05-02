@@ -141,27 +141,31 @@ def organize():
 
 if __name__ =='__main__':
   #BASE_DIR ='C:/Users/User/Desktop/fileman/'
-  BASE_DIR=input("Enter the absolute path of the location where the operations are going to take place [eg: C:/Users/User/Desktop/fileman/ ] :  ")
-  print("|| 1.Create Directories | 2.Create Files | 3.Organize Files | 4.Count Files & Directories | 5. Search files ||")
-  op=int(input("Choose an option: "))
-  if(op==1):
-    dn=int(input("How many directories you want to create? : "))
-    createDir(BASE_DIR,dn)
-    time.sleep(2)
-    print("Process completed!")
-  elif(op==2):
-    fn=int(input("How many files you want to create? : "))
-    createFile(BASE_DIR,fn)
-    time.sleep(2)
-    print("Process completed!")
-  elif(op==3):
-    organize()
-    time.sleep(2)
-    print("Done")
-  elif(op==4):
-    fileCounter(BASE_DIR)
-  elif(op==5):
-    ss=input("Enter the exact file name with extenstion: ")
-    searchFile(BASE_DIR,ss)
-  else:
-    print("Invalid Option!")
+  while(1):
+    BASE_DIR=input("Enter the absolute path of the location where the operations are going to take place [eg: C:/Users/User/Desktop/fileman/ ] :  ")
+    print("|| 1.Create Directories | 2.Create Files | 3.Organize Files | 4.Count Files & Directories | 5. Search files | 6. EXIT ||")
+    op=int(input("Choose an option: "))
+    if(op==1):
+      dn=int(input("How many directories you want to create? : "))
+      createDir(BASE_DIR,dn)
+      time.sleep(2)
+      print("Process completed!")
+    elif(op==2):
+      fn=int(input("How many files you want to create? : "))
+      createFile(BASE_DIR,fn)
+      time.sleep(2)
+      print("Process completed!")
+    elif(op==3):
+      organize()
+      time.sleep(2)
+      print("Done")
+    elif(op==4):
+      fileCounter(BASE_DIR)
+    elif(op==5):
+      ss=input("Enter the exact file name with extenstion: ")
+      searchFile(BASE_DIR,ss)
+    elif(op==6):
+        print("SEE YA!")
+        break
+    else:
+      print("Invalid Option!")
