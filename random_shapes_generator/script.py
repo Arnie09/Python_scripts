@@ -21,8 +21,10 @@ def generate(img,length,breadth):
     major_axis = random.randint(0,length//3)
     minor_axis = random.randint(0,breadth//3)
 
+    angle = random.randint(0,360)
+
     '''drawing the ellipse'''
-    cv2.ellipse(overlay,(centre_x,centre_y),(major_axis,minor_axis),0,0,360,(red_,green_,blue_),-1)
+    cv2.ellipse(overlay,(centre_x,centre_y),(major_axis,minor_axis),angle,0,360,(red_,green_,blue_),-1)
     
     '''applying transaprency to the drawn ellipse'''
     cv2.addWeighted(overlay,0.5,output,0.5,0,img)
@@ -39,7 +41,7 @@ def main():
     for i in range(0,500):
         generate(img,length,breadth)
 
-    ''displaying the image'''
+    '''displaying the image'''
     cv2.imshow('light',img)
     
     '''waiting for the image to be displayed'''
