@@ -14,4 +14,4 @@ for files in onlyfiles:
         resized = cv2.resize(image,(length,breadth))
         cv2.imwrite(files,resized)
         print(resized.shape)
-print(a+ " files were updated!")
+print(a," files were updated!")
