@@ -97,6 +97,14 @@ Since all the scripts are made with Python, it is necessary to have python in yo
 
     Python 3.5+
 
+### web scrapping using bs4 
+
+    A simple script to get sarted with webscraping using beautiful soup 4.
+
+####    Requirements :
+
+    Python3.5+, bs4
+
 ## Getting started with Python: 
 
 In case you want to learn python here's a [great place](https://guide.freecodecamp.org/python/) to start learning python for absolutely free!
