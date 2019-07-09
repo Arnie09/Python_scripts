@@ -1,6 +1,7 @@
 from selenium import webdriver
 from time import sleep
 import sys
+import urllib
 import os
 
 path = os.path.join(sys.path[0], 'chromedriver.exe')
@@ -27,6 +28,7 @@ else:
 '''starting webdriver'''
 driver = webdriver.Chrome(path)
 driver.set_page_load_timeout(30)
+length_of_the_song  = 0
 
 if(state == False):
     
@@ -40,28 +42,40 @@ if(state == False):
     '''loop for the number of times the user wants'''
     while(times>0):
         driver.get(link)
-        sleep(2.5)
-        length_str = driver.find_element_by_class_name("ytp-time-duration").text
-        print(length_str)
-        min,sec = map(int,length_str.split(":"))
-        time = min*60+sec
-        #print(time)
-        sleep(time)
+        sleep(1.5)
+        if(length_of_the_song == 0):
+            length_str = driver.find_element_by_class_name("ytp-time-duration").text
+            print("Length: ",length_str)
+            min,sec = map(int,length_str.split(":"))
+            time = min*60+sec
+            if(time>100):
+                length_of_the_song = time
+                sleep(length_of_the_song)
+            else:
+                sleep(time)
+        else:
+            sleep(length_of_the_song)
         '''if time <100  then it has to be an add'''
-        if(time>100):
-            times -=time
+        if(length_of_the_song>100):
+            times -=length_of_the_song
 else:
     while(times>0):
         driver.get(url)
-        sleep(2.5)
-        length_str = driver.find_element_by_class_name("ytp-time-duration").text
-        print(length_str)
-        min,sec = map(int,length_str.split(":"))
-        time = min*60+sec
-        #print(time)
-        sleep(time)
+        sleep(1.5)
+        if(length_of_the_song == 0):
+            length_str = driver.find_element_by_class_name("ytp-time-duration").text
+            print("Length: ",length_str)
+            min,sec = map(int,length_str.split(":"))
+            time = min*60+sec
+            if(time>100):
+                length_of_the_song = time
+                sleep(length_of_the_song)
+            else:
+                sleep(time)
+        else:
+            sleep(length_of_the_song)
         '''if time <100  then it has to be an add'''
-        if(time>100):
-            times -=time
+        if(length_of_the_song>100):
+            times -=length_of_the_song
 
 driver.quit()
