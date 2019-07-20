@@ -62,6 +62,8 @@ else:
     while(times>0):
         driver.get(url)
         sleep(1.5)
+        player_status = driver.execute_script("return document.getElementById('movie_player').getPlayerState()")
+        print(player_status)
         if(length_of_the_song == 0):
             length_str = driver.find_element_by_class_name("ytp-time-duration").text
             print("Length: ",length_str)
