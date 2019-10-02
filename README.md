@@ -104,7 +104,15 @@ Since all the scripts are made with Python, it is necessary to have python in yo
 ####    Requirements :
 
     Python3.5+, bs4
+    
+### Lorem Ipsum Generator :
 
+    It's a simple python script that will generate New Loren Ipsum with Marvel Avengers Character's name as a word and create paragraph wise Text.
+    
+####    Requirements :
+
+    Python3.5+
+    
 ## Getting started with Python: 
 
 In case you want to learn python here's a [great place](https://guide.freecodecamp.org/python/) to start learning python for absolutely free!
