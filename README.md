@@ -112,6 +112,14 @@ Since all the scripts are made with Python, it is necessary to have python in yo
 ####    Requirements :
 
     Python3.5+
+
+### Geometrical Shapes Detection :
+
+    It's a simple python script that can detect geometrical shapes of an image using python opencv.
+    
+####    Requirements :
+
+    Python3.5+, numpy, opencv-python (pip install opencv-python)
     
 ## Getting started with Python: 
 
